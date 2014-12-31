@@ -31,8 +31,8 @@ var debounce = function(object, eventType, callback){
 };
 
 var canvasResize = function() {
-  width  = window.innerWidth;
-  height = window.innerHeight;
+  width  = document.body.clientWidth;
+  height = document.body.clientHeight;
 
   canvas.width = width;
   canvas.height = height;
@@ -42,6 +42,4 @@ debounce(window, 'resize', function(){
   canvasResize();
 });
 
-setTimeout(function() {
-  canvasResize();
-}, 100);
+canvasResize();
