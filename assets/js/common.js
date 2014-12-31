@@ -42,4 +42,6 @@ debounce(window, 'resize', function(){
   canvasResize();
 });
 
-canvasResize();
+setTimeout(function() {
+  canvasResize();
+}, 100);
