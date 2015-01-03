@@ -78,15 +78,9 @@ var addSheep = function(auto) {
   };
 };
 
-if ('ontouchstart' in document) {
-  document.addEventListener('touchstart', function(event) {
-    addSheep(false);
-  }, false);
-} else {
-  document.addEventListener('click', function(event) {
-    addSheep(false);
-  }, false);
-};
+document.addEventListener('click', function(event) {
+  addSheep(false);
+}, false);
 
 setInterval(function() {
   render();
